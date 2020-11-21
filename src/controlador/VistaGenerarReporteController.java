@@ -38,8 +38,8 @@ public class VistaGenerarReporteController implements Initializable {
     }
     
     public void closeWindow(Button btn) throws IOException {
-        CargarEscena cargar = new CargarEscena();
-        cargar.cargarEscena("/vista/VistaMain.fxml", "Menú Principal Servicio Tecnico", (Stage)btn.getScene().getWindow());
+        CargarEscena cargar = new CargarEscena("/vista/VistaMain.fxml", "Menú Principal Servicio Tecnico");
+        cargar.cargarEscena((Stage) btn.getScene().getWindow());
     }
 
     @FXML

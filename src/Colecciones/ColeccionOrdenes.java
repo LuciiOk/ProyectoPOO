@@ -18,7 +18,7 @@ public class ColeccionOrdenes {
         ordenes = new ArrayList();
         ordenesCodigo = new HashMap();
     }
-    
+    // agrega la orden
     public boolean agregarOrden(OrdenServicio nuevaOrden) {
         if (ordenesCodigo.containsKey(nuevaOrden.getCodigo())) {
             return false;
@@ -73,7 +73,7 @@ public class ColeccionOrdenes {
         }
         return false;
     }
-    
+    // observable list de ordenes
     public ObservableList<OrdenServicio> getOrdenes() { // obtener el arraylist en observablelist
         return FXCollections.observableArrayList(ordenes);
     }
@@ -118,7 +118,7 @@ public class ColeccionOrdenes {
         
         ArrayList<OrdenServicio> ordenesFiltradas = new ArrayList();
         
-        for (OrdenServicio orden : ordenes) {
+        for (OrdenServicio orden : ordenes) { //obtiene las ordenes en las fechas indicadas
             if ((orden.getFechaRecepcion().isAfter(desde) || orden.getFechaRecepcion().isEqual(desde)) && (orden.getFechaRecepcion().isBefore(hasta) || orden.getFechaRecepcion().isEqual(hasta))) {
                 ordenesFiltradas.add(orden);
             } 
@@ -133,7 +133,7 @@ public class ColeccionOrdenes {
         ArrayList<OrdenServicio> ordenesFiltradas = new ArrayList();
         
         for (OrdenServicio orden : ordenes) {
-            if(orden.cantidadDispo() >= desde && orden.cantidadDispo() <= hasta ) {
+            if(orden.cantidadDispo() >= desde && orden.cantidadDispo() <= hasta ) { //  filtra las ordenes por el rango de dispositivos que se desea.
                 ordenesFiltradas.add(orden);
             } 
     }
@@ -165,6 +165,7 @@ public class ColeccionOrdenes {
         return "Cantidad Ordenes: " +  cantOrd + " Cantidad Dispositivos: " + dispositivos;
     }
     
+    // Obtiene la cantidad de dispositivos que ha arreglado un cliente.
     public int cantidadDispoC(String rut) {
         int suma = 0;
         for (OrdenServicio orden : ordenes) {

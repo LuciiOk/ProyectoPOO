@@ -23,7 +23,7 @@ public class ColeccionInventario {
         this.inventario = new ArrayList();
         this.inventarioCodigo = new HashMap();
     }
-    
+    // agrega un nuevo repuesto. verifica en el hashmap y lo agrega al hashmap y arraylist
     public boolean agregarRepuesto(Repuesto nuevo) {
         if (this.inventarioCodigo.containsKey(nuevo.getCodigo()))
                 return false;
@@ -31,11 +31,11 @@ public class ColeccionInventario {
         this.inventarioCodigo.put(nuevo.getCodigo(), nuevo);
         return true;
     }
-    
+    // verifica si un producto ya existe.
     public boolean verificarProductoInventario(int codigo) {
         return this.inventarioCodigo.containsKey(codigo);
     }
-    
+    // busca producto
     private int buscarProductoInventario(int codigo) {
         if (this.inventarioCodigo.containsKey(codigo))
             for (int i = 0; i < this.inventario.size(); i++)
@@ -43,7 +43,7 @@ public class ColeccionInventario {
                     return i;
         return -1;
     }
-    
+    // elimina producto de hashmap y arraylist
     public boolean eliminarProducto(int codigo) {
         if (inventarioCodigo.containsKey(codigo)) {
             int indice = buscarProductoInventario(codigo);
@@ -53,11 +53,11 @@ public class ColeccionInventario {
         }
         return false;
     }
-    
+    // retorna observablelist de productos
     public ObservableList<Repuesto> getObs() {
         return FXCollections.observableArrayList(this.inventario);
     }
-    
+    // describe los productos
     public void describir() {
         for (Repuesto prod : inventario) {
             System.out.println("" + prod.especificar());

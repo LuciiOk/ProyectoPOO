@@ -105,8 +105,8 @@ public class VistaAgregarProductoInventarioController implements Initializable {
     }    
     
     public void closeWindows() throws IOException { // Aqui se cierra la ventana y se vuelve a llamar a la main.
-        CargarEscena cargar = new CargarEscena();
-        cargar.cargarEscena("/vista/VistaMain.fxml", "Menú Principal Servicio Tecnico", (Stage) this.volver.getScene().getWindow());
+        CargarEscena cargar = new CargarEscena("/vista/VistaMain.fxml", "Menú Principal Servicio Tecnico");
+        cargar.cargarEscena((Stage) this.volver.getScene().getWindow());
     }
     
     private Repuesto crearProducto() { // se crea un objeto de repuesto, para luego agregarlo a la lista del inventario

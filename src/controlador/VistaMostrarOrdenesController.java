@@ -99,8 +99,8 @@ public class VistaMostrarOrdenesController implements Initializable {
     }
     
     public void closeWindows() throws IOException {
-        CargarEscena cargar = new CargarEscena();
-        cargar.cargarEscena("/vista/VistaMain.fxml", "Menú Principal Servicio Tecnico", (Stage) this.btnCerrar.getScene().getWindow());
+        CargarEscena cargar = new CargarEscena("/vista/VistaMain.fxml", "Menú Principal Servicio Tecnico");
+        cargar.cargarEscena((Stage) this.btnCerrar.getScene().getWindow());
     }
 
     @FXML
