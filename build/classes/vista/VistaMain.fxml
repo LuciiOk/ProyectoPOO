@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaMainController">
+   <children>
+      <Button fx:id="btnAgregarOrd" layoutX="19.0" layoutY="178.0" mnemonicParsing="false" onAction="#agregarOrdenes" prefHeight="58.0" prefWidth="258.0" text="Agregar/Crear orden de servicio" />
+      <Button fx:id="btnMostrarOrd" layoutX="325.0" layoutY="178.0" mnemonicParsing="false" onAction="#mostrarOrdenes" prefHeight="58.0" prefWidth="258.0" text="Mostrar ordenes de servicio" />
+      <Label layoutX="126.0" layoutY="14.0" text="Servicio Tecnico PC">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnMostrarOrd1" layoutX="325.0" layoutY="285.0" mnemonicParsing="false" onAction="#agregarProductoInventario" prefHeight="58.0" prefWidth="258.0" text="Agregar producto al inventario" />
+      <Button fx:id="btnGenerarReporte" layoutX="19.0" layoutY="285.0" mnemonicParsing="false" onAction="#GenerarReporte" prefHeight="58.0" prefWidth="258.0" text="Generar Reporte Mensual" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="442.0" prefWidth="891.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaAgregarOrdenController">
+   <children>
+      <TextField fx:id="nombreC" layoutX="14.0" layoutY="83.0" prefHeight="25.0" prefWidth="108.0" promptText="Nombre" />
+      <TextField fx:id="apellidoC" layoutX="132.0" layoutY="83.0" prefHeight="25.0" prefWidth="108.0" promptText="Apellido" />
+      <TextField fx:id="rutC" layoutX="249.0" layoutY="83.0" prefHeight="25.0" prefWidth="130.0" promptText="Rut" />
+      <TextField fx:id="telefonoC" layoutX="14.0" layoutY="118.0" prefHeight="25.0" prefWidth="108.0" promptText="telefono" />
+      <TextField fx:id="mailC" layoutX="132.0" layoutY="118.0" prefHeight="25.0" prefWidth="108.0" promptText="E-mail" />
+      <TableView fx:id="tablaVista" editable="true" layoutX="402.0" layoutY="81.0" prefHeight="292.0" prefWidth="478.0">
+        <columns>
+          <TableColumn fx:id="colTipo" editable="false" prefWidth="88.0" sortable="false" text="Tipo" />
+          <TableColumn fx:id="colModelo" editable="false" prefWidth="150.0" sortable="false" text="Modelo" />
+            <TableColumn fx:id="colMarca" editable="false" prefWidth="84.0" sortable="false" text="Marca" />
+            <TableColumn fx:id="colAnalisis" editable="false" prefWidth="97.0" sortable="false" text="Analisis" />
+            <TableColumn fx:id="colRep" prefWidth="75.0" text="Repuesto" />
+            <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="19.0" layoutY="59.0" text="DATOS CLIENTE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="59.0" text="Listado Dispositivos">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="122.0" layoutY="67.0" prefHeight="3.0" prefWidth="255.0" />
+      <Separator layoutX="529.0" layoutY="66.0" prefHeight="3.0" prefWidth="349.0" />
+      <Label fx:id="labelTitulo" layoutX="260.0" layoutY="14.0" text="Orden Servicio N°">
+         <font>
+            <Font name="Verdana" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="587.0" layoutY="385.0" mnemonicParsing="false" onAction="#eliminarDisp" prefHeight="25.0" prefWidth="137.0" text="Eliminar Dispositivos" />
+      <DatePicker fx:id="fechaEntrega" layoutX="250.0" layoutY="118.0" prefHeight="25.0" prefWidth="130.0" promptText="fecha entrega" />
+      <Button layoutX="14.0" layoutY="151.0" mnemonicParsing="false" onAction="#registrarCliente" prefHeight="25.0" prefWidth="366.0" text="registrar cliente" />
+      <Pane fx:id="dispoPane" layoutX="4.0" layoutY="176.0" prefHeight="241.0" prefWidth="387.0">
+         <children>
+            <TextArea fx:id="analisisD" disable="true" layoutX="11.0" layoutY="82.0" prefHeight="78.0" prefWidth="366.0" promptText="Analisis" />
+            <TextField fx:id="marcaD" disable="true" layoutX="269.0" layoutY="43.0" prefHeight="25.0" prefWidth="108.0" promptText="Marca" />
+            <TextField fx:id="modeloD" disable="true" layoutX="129.0" layoutY="43.0" prefHeight="25.0" prefWidth="130.0" promptText="Modelo" />
+            <Button fx:id="agregarDispos" disable="true" layoutX="10.0" layoutY="206.0" mnemonicParsing="false" onAction="#crearDisp" prefHeight="25.0" prefWidth="173.0" text="Agregar Dispositivo" />
+            <Button fx:id="btnCrear" disable="true" layoutX="204.0" layoutY="206.0" mnemonicParsing="false" onAction="#crearOrden" prefHeight="25.0" prefWidth="173.0" text="Agregar Orden" />
+            <Label layoutX="4.0" layoutY="16.0" text="DATOS DISPOSITIVO">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="143.0" layoutY="22.0" prefHeight="3.0" prefWidth="228.0" />
+            <RadioButton fx:id="formateo" disable="true" layoutX="204.0" layoutY="178.0" mnemonicParsing="false" text="formateo" />
+            <RadioButton fx:id="limpieza" disable="true" layoutX="303.0" layoutY="178.0" mnemonicParsing="false" text="Limpieza" />
+            <ComboBox fx:id="tipoD" disable="true" layoutX="14.0" layoutY="43.0" prefHeight="25.0" prefWidth="108.0" promptText="tipo dispositivos" />
+            <ComboBox fx:id="listaRepuesto" disable="true" layoutX="10.0" layoutY="174.0" prefHeight="25.0" prefWidth="173.0" promptText="lista repuestos" />
+         </children>
+      </Pane>
+      <Button fx:id="volver" layoutX="740.0" layoutY="385.0" mnemonicParsing="false" onAction="#volver" prefHeight="25.0" prefWidth="137.0" text="volver" />
+   </children>
+</AnchorPane>

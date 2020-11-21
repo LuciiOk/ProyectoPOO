@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controlador.VistaModificarDispositivoController">
+   <children>
+      <ChoiceBox fx:id="tipoD" layoutX="14.0" layoutY="90.0" prefHeight="40.0" prefWidth="183.0" />
+      <TextArea fx:id="analisisD" layoutX="15.0" layoutY="157.0" prefHeight="87.0" prefWidth="572.0" promptText="Analisis">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="marcaD" layoutX="209.0" layoutY="90.0" prefHeight="40.0" prefWidth="183.0" promptText="Marca">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="modeloD" layoutX="403.0" layoutY="90.0" prefHeight="40.0" prefWidth="183.0" promptText="Modelo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="130.0" layoutY="23.0" prefHeight="52.0" prefWidth="342.0" text="Modificar dispositivo">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnModificar" layoutX="14.0" layoutY="278.0" mnemonicParsing="false" onAction="#modificar" prefHeight="80.0" prefWidth="572.0" text="Modificar orden">
+         <font>
+            <Font name="Verdana" size="36.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

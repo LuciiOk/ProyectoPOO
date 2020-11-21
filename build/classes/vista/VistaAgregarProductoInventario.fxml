@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaAgregarProductoInventarioController">
+   <children>
+      <TableView fx:id="tablaInventario" layoutX="520.0" layoutY="96.0" prefHeight="329.0" prefWidth="442.0">
+        <columns>
+          <TableColumn fx:id="colCodi" prefWidth="89.0" text="Codigo" />
+            <TableColumn fx:id="colModelo" prefWidth="81.0" text="Modelo" />
+            <TableColumn fx:id="colMarca" prefWidth="106.0" text="Marca" />
+            <TableColumn fx:id="colPrecio" prefWidth="99.0" text="Precio" />
+            <TableColumn fx:id="colStock" prefWidth="66.0" text="Stock" />
+        </columns>
+      </TableView>
+      <Separator layoutX="192.0" layoutY="67.0" prefHeight="12.0" prefWidth="286.0" />
+      <Button fx:id="btnAgregar" layoutX="25.0" layoutY="405.0" mnemonicParsing="false" onAction="#agregarProducto" prefHeight="58.0" prefWidth="436.0" text="Agregar producto">
+         <font>
+            <Font size="30.0" />
+         </font></Button>
+      <Button layoutX="520.0" layoutY="437.0" mnemonicParsing="false" onAction="#eliminarProducto" prefHeight="32.0" prefWidth="212.0" text="Eliminar producto" />
+      <Label layoutX="25.0" layoutY="42.0" prefHeight="50.0" prefWidth="166.0" text="Ingresar producto">
+         <font>
+            <Font name="Verdana" size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="607.0" layoutY="67.0" prefHeight="12.0" prefWidth="350.0" />
+      <Label layoutX="529.0" layoutY="42.0" prefHeight="50.0" prefWidth="166.0" text="Listado">
+         <font>
+            <Font name="Verdana" size="17.0" />
+         </font>
+      </Label>
+      <Pane fx:id="MainPanel" layoutX="14.0" layoutY="21.0" prefHeight="355.0" prefWidth="483.0">
+         <children>
+            <TextField fx:id="codProducto" layoutX="21.0" layoutY="74.0" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="129.0" promptText="codigo" />
+            <TextField fx:id="modeloProducto" layoutX="340.0" layoutY="74.0" prefHeight="25.0" prefWidth="129.0" promptText="modelo" />
+            <TextField fx:id="marcaProducto" layoutX="185.0" layoutY="74.0" prefHeight="25.0" prefWidth="129.0" promptText="marca" />
+            <TextField fx:id="cantidad" layoutX="21.0" layoutY="114.0" onKeyTyped="#eventKey" prefHeight="32.0" prefWidth="200.0" promptText="cantidad">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="precio" layoutX="269.0" layoutY="114.0" onKeyTyped="#eventKey" prefHeight="32.0" prefWidth="200.0" promptText="precio">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <MenuButton fx:id="tipoProd" layoutX="21.0" layoutY="162.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="145.0" text="Tipo producto">
+              <items>
+                <MenuItem fx:id="pantalla" mnemonicParsing="false" onAction="#mostAddPanta" text="Pantallas" />
+                <MenuItem fx:id="discoDuro" mnemonicParsing="false" onAction="#mostrarAddDiscDur" text="Disco Duro" />
+                  <MenuItem fx:id="memoria" mnemonicParsing="false" onAction="#mostrarAddMemoria" text="Memorias" />
+              </items>
+            </MenuButton>
+            <TextField fx:id="tamPantalla" layoutX="21.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="tamaño" visible="false" />
+            <TextField fx:id="resPantalla" layoutX="185.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="resolucion" visible="false" />
+            <TextField fx:id="panelPantalla" layoutX="340.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="panel" visible="false" />
+            <TextField fx:id="capDiscoDuro" layoutX="21.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="capacidad" visible="false" />
+            <TextField fx:id="veloDiscoDuro" layoutX="185.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="velocidad" visible="false" />
+            <TextField fx:id="tamañoDiscoDuro" layoutX="340.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="tamaño" visible="false" />
+            <TextField fx:id="tipoMemoria" layoutX="21.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="tipo" visible="false" />
+            <TextField fx:id="frecMemoria" layoutX="185.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="frecuencia" visible="false" />
+            <TextField fx:id="capMemoria" layoutX="340.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="capacidad" visible="false" />
+         </children>
+      </Pane>
+      <Button fx:id="volver" layoutX="744.0" layoutY="437.0" mnemonicParsing="false" onAction="#volver" prefHeight="32.0" prefWidth="212.0" text="volver" />
+   </children>
+</AnchorPane>

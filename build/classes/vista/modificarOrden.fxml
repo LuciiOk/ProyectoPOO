@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ModificarOrdenController">
+   <children>
+      <Button fx:id="modificar" layoutX="12.0" layoutY="294.0" mnemonicParsing="false" onAction="#modificarOrden" prefHeight="92.0" prefWidth="577.0" text="Modificar orden">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="fechaIng" layoutX="14.0" layoutY="53.0" prefHeight="39.0" prefWidth="279.0" promptText="Fecha ingreso" />
+      <DatePicker fx:id="fechaEntrega" layoutX="307.0" layoutY="53.0" prefHeight="39.0" prefWidth="279.0" promptText="fecha entrega" />
+      <Label fx:id="labelOrden" layoutX="14.0" layoutY="14.0" text="Orden servicio">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="104.0" text="Datos cliente">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mailC" layoutX="198.0" layoutY="218.0" prefHeight="39.0" prefWidth="184.0" promptText="E-mail">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="telefonoC" layoutX="16.0" layoutY="218.0" prefHeight="39.0" prefWidth="164.0" promptText="telefono">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="rutC" layoutX="402.0" layoutY="165.0" prefHeight="39.0" prefWidth="184.0" promptText="Rut">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="apellidoC" layoutX="198.0" layoutY="165.0" prefHeight="39.0" prefWidth="184.0" promptText="Apellido">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nombreC" layoutX="16.0" layoutY="163.0" prefHeight="39.0" prefWidth="164.0" promptText="Nombre">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

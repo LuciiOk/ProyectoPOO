@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="220.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaGenerarReporteController">
+   <children>
+      <Button fx:id="generar" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="38.0" prefWidth="197.0" text="Generar Reporte">
+         <font>
+            <Font name="Verdana" size="17.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="fechaDesde" layoutX="57.0" layoutY="73.0" prefHeight="37.0" prefWidth="163.0" promptText="Desde" />
+      <DatePicker fx:id="fechaHasta" layoutX="280.0" layoutY="73.0" prefHeight="37.0" prefWidth="163.0" promptText="Hasta" />
+      <Label layoutX="148.0" layoutY="14.0" text="GENERAR REPORTE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="volver" layoutX="292.0" layoutY="150.0" mnemonicParsing="false" onAction="#volver" prefHeight="38.0" prefWidth="197.0" text="Volver">
+         <font>
+            <Font name="Verdana" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
